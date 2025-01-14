@@ -1,50 +1,46 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <title>Gesture Interactions - A-Frame & AR.js</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="styles.css">
+<head>
+  <title>AR Video on Marker Detection</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styles.css">
 
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    <script src="gesture-detector.js"></script>
-    <script src="gesture-handler.js"></script>
-  </head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
 
-  <body>
-    <a-scene
-      arjs
-      embedded
-      renderer="logarithmicDepthBuffer: true;"
-      vr-mode-ui="enabled: false"
-      gesture-detector
-      id="scene"
+<body>
+  <a-scene
+    arjs
+    embedded
+    renderer="logarithmicDepthBuffer: true;"
+    vr-mode-ui="enabled: false"
+  >
+    <!-- видеоо
+    <a-marker
+      type="pattern"
+      url="gess.pat"
+      raycaster="objects: .clickable"
+      emitevents="true"
+      id="markerA"
     >
-      <a-assets>
-    <img id="myImage" src="кот с комп.jpg" alt="My Image">
-</a-assets>
 
-<a-marker
-    type="pattern"
-    url="pattern-white flowers.patt"
-    raycaster="objects: .clickable"
-    emitevents="true"
-    cursor="fuse: false; rayOrigin: mouse;"
-    id="markerA"
->
-    <a-image
-        src="#myImage"
-        position="0 -180 0"
-        scale="1 1 1"
-        class="clickable"
-        gesture-handler
-    ></a-image>
-</a-marker>
-        </a-entity>
+      <a-video src="kit.mp4" position="0 0 0" rotation="-90 0 0" width="2" height="1.5" autoplay="true" loop="true"></a-video>#
+    </a-marker> -->
+
+    <a-marker
+      type="pattern"
+      url="konp.pat"
+      raycaster="objects: .clickable"
+      emitevents="true"
+      id="markerA"
+    >
+
+        <a-sound src="tмонеточка-Пост-пост.mp3" autoplay="true"></a-sound>
       </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
 </html>
